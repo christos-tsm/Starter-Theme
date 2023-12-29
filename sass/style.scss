@@ -1,0 +1,23 @@
+/*!
+Theme Name: Starter Theme
+Theme URI: http://underscores.me/
+Author: Net22
+Author URI: https://www.net22.gr
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: starter-theme
+*/
+
+/** Utilities */
+@import './utils/colors';
+@import './utils/reset';
+@import './utils/global-styles';
+/** Components */
+@import './components/header';
+@import './components/footer';
+/** Pages */
+@import './pages/homepage';
