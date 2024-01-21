@@ -4,13 +4,10 @@
  * Enqueue scripts and styles.
  */
 function starter_theme_scripts() {
+    /** Styles */
     wp_enqueue_style('starter-theme-style', get_stylesheet_uri(), array(), _S_VERSION);
-    wp_style_add_data('starter-theme-style', 'rtl', 'replace');
-
-    wp_enqueue_script('starter-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
-
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
+    /** Scripts */
+    wp_enqueue_script('remove-greek-uppercase-accents', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true);
+    wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'starter_theme_scripts');
